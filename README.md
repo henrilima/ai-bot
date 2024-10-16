@@ -37,12 +37,9 @@ Este é um bot para Discord desenvolvido em TypeScript que utiliza a inteligênc
     CHAT=id-do-chat-do-discord
     ```
 
-5. Configure o Firebase Realtime Database. Crie um arquivo `firebase.ts` na raiz do projeto e adicione o seguinte código com as credenciais do Firebase:
+5. Configure o Firebase Realtime Database no arquivo `firebase.ts` na raiz do projeto e adicione as credenciais do Firebase:
 
    ```
-   import { initializeApp } from "firebase/app";
-   import { getDatabase } from "firebase/database";
-
    const firebaseConfig = {
      apiKey: "sua-api-key",
      authDomain: "seu-auth-domain",
@@ -52,11 +49,6 @@ Este é um bot para Discord desenvolvido em TypeScript que utiliza a inteligênc
      messagingSenderId: "seu-messaging-sender-id",
      appId: "seu-app-id"
    };
-
-   const app = initializeApp(firebaseConfig);
-   const database = getDatabase(app);
-
-   export { database };
     ```
 
     Certifique-se de obter as informações de configuração do seu projeto no [console do Firebase](https://console.firebase.google.com/).
